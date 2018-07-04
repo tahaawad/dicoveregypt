@@ -1,0 +1,44 @@
+<resources>
+    <string name="google_maps_api_key">AIzaSyAnsSUUVNQYvnh9ou0H6zqp7Wblaj3HiaI</string>
+    <string name="app_name">Discover Egypt</string>
+    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_bar">app bar</string>
+    <string name="sample">nvjdfvkfvlfdbvfdbbdfbv vhbfivbbfvbdfvbfo</string>
+    <string name="sample2">vbfhbvhbfhvbhfbbvhbhbfdbvsvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbhbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvbshbhfvbjhbdjbvfbsvbbvbsvbvbfhbvhbfhvbhfbbvhbhbfdbvshbhfvbjhbdjbvfbsvbbvbsvb</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="confirem_removing_msg">Site is removed from favourite list</string>
+    <string name="confirm_adding_msg">Site is added to favourite list</string>
+    <string name="about_string">An app is designed to help tourists to discover touristic sites in Egypt and know information about this site</string>
+    <string name="my_email_address">moetazashraf82@gmail.com</string>
+    <string name="version_number">Version 1.0</string>
+    <string name="image_envelope">imageUrl</string>
+    <string name="desc_envelope">desc</string>
+    <string name="name_envelope">name</string>
+    <string name="latong_envelope">latLong</string>
+    <string name="remove_msg_confirm">Item is removed</string>
+    <string name="error_msg">Something went wrong</string>
+    <string name="site_image">Site Image</string>
+    <string name="remove_tip">Swap to remove item</string>
+
+    <string-array name="listentries">
+        <item>English</item>
+        <item>Arabic</item>
+
+    </string-array>
+    <string-array name="listvalues">
+        <item>1</item>
+        <item>2</item>
+
+    </string-array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="checking_internet_msg">Check Internet Connetion</string>
+    <string name="site_name_for_map">siteOnMap</string>
+    <string name="latlong_string">lateOnMap</string>
+    <string name="widget_confirm_msg">Site Successfully is added to widget</string>
+    <string name="widget_title">title</string>
+    <string name="widget_desc">desc</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+
+        <item
+            android:id="@+id/fav"
+            android:icon="@drawable/fav_icon"
+            android:title="Favourite Places" />
+
+        <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/ic_settings"
+            >
+        </item>
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about_icon"
+            android:title="About" />
+
+    </group>
+
+</menu>

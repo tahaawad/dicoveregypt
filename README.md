@@ -1,1 +1,1 @@
-# dicoveregypt
+# Discover Egypt
