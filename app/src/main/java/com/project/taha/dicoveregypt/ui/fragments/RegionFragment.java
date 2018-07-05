@@ -25,6 +25,7 @@ import com.project.taha.dicoveregypt.utilies.Utilities;
 import com.project.taha.dicoveregypt.interfaces.SiteListener;
 import com.project.taha.dicoveregypt.models.Site;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +56,7 @@ public class RegionFragment extends Fragment {
     String regionName;
     SiteListener siteListener;
     private Unbinder unbinder;
+    private final String LIST_KEY = "sList";
 
     public RegionFragment() {
         // Required empty public constructor
@@ -89,14 +91,19 @@ public class RegionFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         Intent intent = getActivity().getIntent();
-        if (intent.hasExtra("regionName")) {
-            regionName = intent.getStringExtra("regionName");
+        if (intent.hasExtra(getString(R.string.region_key))) {
+            regionName = intent.getStringExtra(getString(R.string.region_key));
 
         }
         getActivity().setTitle(regionName);
 
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(LIST_KEY, (Serializable) list);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -111,9 +118,21 @@ public class RegionFragment extends Fragment {
         setGridManager();
         setHasOptionsMenu(true);
         list.clear();
+
+        if (savedInstanceState == null) {
+            getData();
+        } else {
+            list = (List<Site>) savedInstanceState.getSerializable(LIST_KEY);
+            customAdapter = new CustomAdapter(getContext(), list, siteListener);
+            recyclerView.setAdapter(customAdapter);
+        }
+
+        return view;
+    }
+
+    private void getData() {
         customAdapter = new CustomAdapter(getContext(), list, siteListener);
         recyclerView.setAdapter(customAdapter);
-
         mRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -146,8 +165,6 @@ public class RegionFragment extends Fragment {
 
             }
         });
-
-        return view;
     }
 
     private void setGridManager() {

@@ -22,4 +22,15 @@
     <dimen name="start_image_width">180dp</dimen>
     <dimen name="start_image_height">180dp</dimen>
     <dimen name="textsize_widget">12sp</dimen>
+    <dimen name="site_cardview_marginbottm">16dp</dimen>
+    <dimen name="site_cardview_elevation">5dp</dimen>
+    <dimen name="site_textviewmargintop">12dp</dimen>
+    <dimen name="row_cardview_elevation">2dp</dimen>
+    <dimen name="row_image_height">0dp</dimen>
+    <dimen name="row_textview_size">25sp</dimen>
+    <dimen name="row_textview_height">0dp</dimen>
+    <dimen name="widget_textviewpadding">15dp</dimen>
+    <dimen name="widget_lineear_paddingstart">5dp</dimen>
+    <dimen name="widget_lineear_paddingend">5dp</dimen>
+    <dimen name="widget_textviewmargintop">30dp</dimen>
 </resources>

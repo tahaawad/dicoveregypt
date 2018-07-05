@@ -4,13 +4,13 @@
 
         <item
             android:id="@+id/locate_on_map"
-            android:icon="@drawable/fav_icon"
-            android:title="Locate on map" />
+
+            android:title="@string/locate_on_map" />
 
         <item
             android:id="@+id/add_to_widget"
-            android:title="Add to Widget"
-            android:icon="@drawable/ic_settings"
+            android:title="@string/add_to_widget"
+
             >
         </item>
 

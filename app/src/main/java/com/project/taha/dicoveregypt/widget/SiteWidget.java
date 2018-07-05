@@ -31,13 +31,13 @@ public class SiteWidget extends AppWidgetProvider {
     }
 
     private static String getTitle(Context context) {
-        SharedPreferences prefs = context.getSharedPreferences("widgetpref", MODE_PRIVATE);
-        return prefs.getString(context.getString(R.string.widget_title), "NO Value");
+        SharedPreferences prefs = context.getSharedPreferences(context.getString(R.string.pref_name), MODE_PRIVATE);
+        return prefs.getString(context.getString(R.string.widget_title), context.getString(R.string.no_value_msg));
     }
 
     private static String getDesc(Context context) {
-        SharedPreferences prefs = context.getSharedPreferences("widgetpref", MODE_PRIVATE);
-        return prefs.getString(context.getString(R.string.widget_desc), "NO Value");
+        SharedPreferences prefs = context.getSharedPreferences(context.getString(R.string.pref_name), MODE_PRIVATE);
+        return prefs.getString(context.getString(R.string.widget_desc), context.getString(R.string.no_value_msg));
     }
 
     @Override

@@ -31,6 +31,7 @@ import com.project.taha.dicoveregypt.ui.activities.FavActivity;
 import com.project.taha.dicoveregypt.utilies.Utilities;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,6 +61,7 @@ public class MainFragment extends Fragment {
     private Firebase mRef;
     private CustomAdapter customAdapter;
     private List<Region> list = new ArrayList<>();
+    private final String LIST_KEY = "rList";
 
 
     public MainFragment() {
@@ -67,6 +69,11 @@ public class MainFragment extends Fragment {
     }
 
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(LIST_KEY, (Serializable) list);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,7 +90,13 @@ public class MainFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         setGridManager();
         if (Utilities.isNetworkConnected(getContext())) {
-            getData();
+
+            if (savedInstanceState == null) {
+                getData(list);
+            } else {
+                list = (List<Region>) savedInstanceState.getSerializable(LIST_KEY);
+                setCachedData(list);
+            }
         } else {
             FancyToast.makeText(getContext(),getString(R.string.checking_internet_msg),FancyToast.LENGTH_LONG
                     ,FancyToast.ERROR,false).show();
@@ -92,7 +105,12 @@ public class MainFragment extends Fragment {
         return view;
     }
 
-    private void getData() {
+    private void setCachedData(List<Region> list) {
+        customAdapter = new CustomAdapter(getContext(), list, null);
+        recyclerView.setAdapter(customAdapter);
+    }
+
+    private void getData(List<Region> list) {
 
         customAdapter = new CustomAdapter(getContext(), list, null);
         recyclerView.setAdapter(customAdapter);
@@ -103,8 +121,8 @@ public class MainFragment extends Fragment {
                 Region region = new Region();
                 region.setImage(dataSnapshot.child(IMAGE_NODE).getValue(String.class));
                 region.setName(dataSnapshot.getKey());
-                list.add(region);
-                customAdapter.notifyItemInserted(list.size() - 1);
+                MainFragment.this.list.add(region);
+                customAdapter.notifyItemInserted(MainFragment.this.list.size() - 1);
             }
 
             @Override

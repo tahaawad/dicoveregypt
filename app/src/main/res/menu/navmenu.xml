@@ -5,18 +5,13 @@
         <item
             android:id="@+id/fav"
             android:icon="@drawable/fav_icon"
-            android:title="Favourite Places" />
+            android:title="@string/favourite_places" />
 
-        <item
-            android:id="@+id/settings"
-            android:title="Settings"
-            android:icon="@drawable/ic_settings"
-            >
-        </item>
+
         <item
             android:id="@+id/about"
             android:icon="@drawable/about_icon"
-            android:title="About" />
+            android:title="@string/about" />
 
     </group>
 

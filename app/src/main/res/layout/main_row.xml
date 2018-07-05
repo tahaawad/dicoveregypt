@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="@dimen/row_margin"
     app:cardCornerRadius="@dimen/row_radius"
-    app:elevation="2dp"
+    app:elevation="@dimen/row_cardview_elevation"
     android:layout_width="match_parent"
     android:layout_height="@dimen/row_height">
     <LinearLayout
@@ -19,16 +19,16 @@
             android:id="@+id/region_image"
             android:layout_weight="0.7"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/row_image_height"
             tools:ignore="ContentDescription"
              />
         <TextView
             android:gravity="center"
             android:id="@+id/region_name"
             android:layout_gravity="center"
-            android:textSize="25sp"
+            android:textSize="@dimen/row_textview_size"
             android:layout_weight="0.3"
             android:layout_width="match_parent"
-            android:layout_height="0dp" />
+            android:layout_height="@dimen/row_textview_height" />
     </LinearLayout>
 </android.support.v7.widget.CardView>

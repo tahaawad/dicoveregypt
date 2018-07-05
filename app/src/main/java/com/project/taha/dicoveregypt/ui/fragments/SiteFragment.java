@@ -62,6 +62,8 @@ public class SiteFragment extends Fragment implements  LoaderManager.LoaderCallb
     private ContentResolver contentResolver;
     private boolean check1 = false;
     private boolean check2 = false;
+    private final String DONE_MSG = "DONE";
+
     public SiteFragment() {
         // Required empty public constructor
     }
@@ -86,20 +88,18 @@ public class SiteFragment extends Fragment implements  LoaderManager.LoaderCallb
             siteStr = bundle.getString(getString(R.string.name_envelope));
             latLongStr= bundle.getString(getString(R.string.latong_envelope));
 
-
-
     }
 
     private void saveToWidget(String descStr) {
         SharedPreferences.Editor editor = getActivity()
-                .getSharedPreferences("widgetpref", MODE_PRIVATE).edit();
+                .getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
         editor.putString(getString(R.string.widget_desc), descStr);
         editor.putString(getString(R.string.widget_title), siteStr);
         editor.apply();
 
 
         Utilities.showSnack(coordinatorLayout,getString(R.string.widget_confirm_msg)
-                ,"Done",new  Action() {
+                ,DONE_MSG,new  Action() {
                     @Override
                     public void undo() {
                         undoSavingToWidget();
@@ -109,9 +109,9 @@ public class SiteFragment extends Fragment implements  LoaderManager.LoaderCallb
 
     private void undoSavingToWidget() {
         SharedPreferences.Editor editor = getActivity()
-                .getSharedPreferences("widgetpref", MODE_PRIVATE).edit();
-        editor.putString(getString(R.string.widget_desc), "No Value");
-        editor.putString(getString(R.string.widget_title), "No Value");
+                .getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
+        editor.putString(getString(R.string.widget_desc), getString(R.string.no_value_msg));
+        editor.putString(getString(R.string.widget_title), getString(R.string.no_value_msg));
         editor.apply();
     }
 
@@ -215,7 +215,7 @@ public class SiteFragment extends Fragment implements  LoaderManager.LoaderCallb
             if (cursor != null && cursor.getCount() > 0 ) {
                 unfavOperation();
                 Utilities.showSnack(coordinatorLayout,getString(R.string.confirem_removing_msg)
-                        ,"Done",new  Action() {
+                        ,DONE_MSG,new  Action() {
                     @Override
                     public void undo() {
                         favOperation();
@@ -225,7 +225,7 @@ public class SiteFragment extends Fragment implements  LoaderManager.LoaderCallb
 
                 favOperation();
                 Utilities.showSnack(coordinatorLayout,getString(R.string.confirm_adding_msg)
-                        ,"Done",new Action() {
+                        ,DONE_MSG,new Action() {
                     @Override
                     public void undo() {
                         unfavOperation();
